@@ -1,0 +1,39 @@
+nome: "Matheus"
+idade: 30
+
+objeto:
+  versão: 2
+  arquivo: "teste.txt"
+
+# dados numéricos
+numero: 2
+pi: 3.14
+
+# Strings
+string_sem_aspas: Digite um texto aqui
+texto: "Este tambem e um texto valido sem acentos"
+
+# valores nulos
+nulo: ~
+nulo_dois: null
+
+# valores booleanos
+verdadeiro: True
+verdadeiro_dois: On
+falso: False
+falso_dois: Off
+
+# listas
+lista: [1, 2, 3, 4, 5]
+lista_dois: 
+  - "teste"
+  - True
+  - 10.4
+
+# dicionarios
+obj: {a: 1, b: 2, c: 3}
+obj_dois:
+  a: 1
+  b: 2
+  objeto_interno:
+    obj_tres: 'objeto'

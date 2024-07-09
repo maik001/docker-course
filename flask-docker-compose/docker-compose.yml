@@ -1,0 +1,28 @@
+version: '3.4'
+
+services:
+  db:
+    build: ./mysql/ # faz o build no diretório onde está a imagem
+    restart: always
+    env_file: ./config/db.env
+    ports:
+    - "3308:3306"
+    networks:
+    - flask-network
+
+  backend:
+    depends_on:
+      - db
+    build: ./flask
+    ports:
+      - "5000:5000"
+    restart: always
+    # faz o bind mount da posta da maquina host
+    volumes:
+      - "C:\\Users\\maike\\OneDrive\\Documents\\Projetos\\docker-course\\flask-docker-compose\\flask:/app"
+    networks:
+    - flask-network
+
+networks:
+  flask-network:
+    driver: bridge
